@@ -110,11 +110,11 @@ const get = async function (req, res) {
 	assignmentJson.user = user;
 	assignmentJson.subject = subject;
 
-	[err, files] = await to(getFile(assignmentJson.fileId));
-	if (err) {
-		return ReE(res, err);
-	}
-	assignmentJson.file = files;
+	// [err, files] = await to(getFile(assignmentJson.fileId));
+	// if (err) {
+	// 	return ReE(res, err);
+	// }
+	// assignmentJson.file = files;
 
 	return ReS(res, { assignment: assignmentJson });
 };

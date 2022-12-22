@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Assignment = mongoose.model('Assignment', new mongoose.Schema({
 	name: { type: String, allowNull: false, required: [true, 'Assignment Name is required'] },
 	deadline: { type: Date, allowNull: true },
+	filePath: { type: String, allowNull: false },
 	status: {
 		type: String,
 		enum: ["PENDING", "SUBMITTED", "MISSED"],
