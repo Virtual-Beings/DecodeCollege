@@ -34,6 +34,11 @@
 								"glob": "**/*",
 								"input": "template/img/",
 								"output": "/assets/img/"
+							},
+							{
+								"glob": "**/*",
+								"input": "../uploads/files",
+								"output": "/assets/"
 							}
 						],
 						"styles": [

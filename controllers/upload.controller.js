@@ -17,12 +17,12 @@ const uploadFile = async function (req, res) {
 module.exports.uploadFile = uploadFile;
 
 // exports.deleteFile = async function (fileId) {
-// 	let fileId = req.body.fileId;
-// 	if (!fileId) {
+// 	let fileId1 = req.body.fileId;
+// 	if (!fileId1) {
 // 		return ReE(res, "File Id is required");
 // 	}
 
-// 	let userId = fileId.split("-")[0];
+// 	let userId = fileId1.split("-")[0];
 // 	if (userId != req.user._id) {
 // 		return ReE(res, "You are not authorized to delete this file");
 // 	}
@@ -76,16 +76,20 @@ const uploadOnMulter = async function (req, res, itemType) {
 	}
 
 	let file;
-	[err, file] = await to(File.create({
-		name: req.file.fileName,
-		driveFileId: req.file.fileId,
-		itemType: itemType
-	}));
+
+	//Drive upload
 	// [err, file] = await to(File.create({
-	// 	name: req.file.filename,
-	// 	filePath: req.file.path,
+	// 	name: req.file.fileName,
+	// 	driveFileId: req.file.fileId,
 	// 	itemType: itemType
 	// }));
+
+	//Local upload
+	[err, file] = await to(File.create({
+		name: req.file.filename,
+		filePath: req.file.path,
+		itemType: itemType
+	}));
 	if (err) {
 		logger.error("Upload Controller - upload : Could not create file ", err);
 		return ReE(res, err, 422);
