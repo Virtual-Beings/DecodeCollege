@@ -9,12 +9,12 @@ export const environment = {
 	paraphrasingUrl: "https://paraphraser1.p.rapidapi.com/",
 	paraphrasingHost: "paraphraser1.p.rapidapi.com/",
 	firebaseConfig: {
-		apiKey: "AIzaSyC8etMYB8s9E-cd6BUvr6TA70itbDYTXVk",
-		authDomain: "decodecollege.firebaseapp.com",
-		projectId: "decodecollege",
-		storageBucket: "decodecollege.appspot.com",
-		messagingSenderId: "49851792422",
-		appId: "1:49851792422:web:a28388239cbd07fb89bae7",
-		measurementId: "G-RXRBMN6J4P"
-	},
+		apiKey: "AIzaSyD_KM6byE_vb3hBZOPKFUUKnXuguZzY9qI",
+		authDomain: "decodecollege2.firebaseapp.com",
+		projectId: "decodecollege2",
+		storageBucket: "decodecollege2.appspot.com",
+		messagingSenderId: "507087019686",
+		appId: "1:507087019686:web:a73f6443a1b3d979101e67",
+		measurementId: "G-PTM5K40CLC"
+	}
 };
